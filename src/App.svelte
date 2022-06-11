@@ -1,6 +1,11 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  import logo from "@/assets/svelte.png";
+  import Counter from "@/lib/Counter.svelte";
+
+  const a = "123";
+  const str = "xxx" + a;
+
+  console.log(str);
 </script>
 
 <main>
@@ -20,10 +25,10 @@
   </p>
 </main>
 
-<style>
+<style lang="less">
   :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   main {

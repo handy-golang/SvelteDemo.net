@@ -43,21 +43,22 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
 
----  
+---
 
 以下为 go serve 提供支持
-  
+
 ## app_env.yaml
+
 ```yaml
 Port: 8975
-
 ```
 
 ## sys_env.yaml
+
 ```yaml
 # IP
 LocalIP: "xx.xx.xx.xx"
@@ -71,6 +72,7 @@ RunMod: 1
 ```
 
 ## go.work
+
 ```
 go 1.18
 
