@@ -6,6 +6,11 @@ if (ViteConst) {
     rmAgin: 'mo777',
   };
 }
+
+const a = '123';
+const str = 'xxx' + a;
+let str3 = 'asdasd';
+
 import { registerSW } from 'virtual:pwa-register';
 registerSW({
   onNeedRefresh() {},
