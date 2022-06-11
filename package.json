@@ -1,0 +1,27 @@
+{
+  "name": "svelte-demo",
+  "Port": 8573,
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && ./_shell/build.sh",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "serve": "./_shell/serve_start.sh",
+    "preview": "vite preview",
+    "git": "./_shell/gitSet.sh",
+    "sync": "./_shell/sync_git.sh",
+    "deploy": "./_shell/deploy.sh"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  }
+}
