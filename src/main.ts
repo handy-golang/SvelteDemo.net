@@ -1,6 +1,5 @@
 declare const ViteConst: any;
 
-
 if (ViteConst) {
   window.ViteConst = {
     ...ViteConst,
@@ -13,13 +12,11 @@ registerSW({
   onOfflineReady() {},
 });
 
+import App from '@/App.svelte';
 
-import App from '@/App.svelte'
-
-document.getElementById('SvelteApp').innerHTML=""
+document.getElementById('SvelteApp').innerHTML = '';
 const app = new App({
-  target: document.getElementById('SvelteApp')
-})
+  target: document.getElementById('SvelteApp'),
+});
 
-export default app  
-  
+export default app;

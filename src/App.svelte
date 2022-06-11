@@ -1,11 +1,12 @@
 <script lang="ts">
-  import logo from "@/assets/svelte.png";
-  import Counter from "@/lib/Counter.svelte";
+  import logo from '@/assets/svelte.png';
+  import Counter from '@/lib/Counter.svelte';
 
-  const a = "123";
-  const str = "xxx" + a;
+  const a = '123';
+  const str = 'xxx' + a;
+  let str3 = 'asdasd';
 
-  console.log(str);
+  console.log(str, str3);
 </script>
 
 <main>
@@ -15,20 +16,19 @@
   <Counter />
 
   <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
+    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.
   </p>
 
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
+    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for the officially supported framework, also
+    powered by Vite!
   </p>
 </main>
 
 <style lang="less">
   :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
   }
 
   main {
