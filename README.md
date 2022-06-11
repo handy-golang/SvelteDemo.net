@@ -12,7 +12,7 @@ Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also pow
 
 ## Technical considerations
 
-**Why use this over SvelteKit?**
+**Why use this over SvelteKit?**  
 
 - It brings its own routing solution which might not be preferable for some users.
 - It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.

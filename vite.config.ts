@@ -49,7 +49,7 @@ import AppPackage from "./package.json";
 const ProxyUrl = `http://localhost:${AppPackage.Port}`;
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig({  
   plugins: [svelte(), VitePWA(PwaConfig)],
   define: {
     ViteConst: JSON.stringify({
