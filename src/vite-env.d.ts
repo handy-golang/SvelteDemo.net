@@ -2,7 +2,6 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-pwa/client" />
 
-
 declare global {
   interface Window {
     mo7Encrypt: (msg: string) => string;
@@ -16,6 +15,5 @@ declare global {
     };
   }
 }
-
 
 export {};

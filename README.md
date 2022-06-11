@@ -12,7 +12,7 @@ Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also pow
 
 ## Technical considerations
 
-**Why use this over SvelteKit?**  
+**Why use this over SvelteKit?**
 
 - It brings its own routing solution which might not be preferable for some users.
 - It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
@@ -43,7 +43,7 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 export default writable(0);
 ```
 
@@ -61,11 +61,11 @@ Port: 8975
 
 ```yaml
 # IP
-LocalIP: "xx.xx.xx.xx"
+LocalIP: 'xx.xx.xx.xx'
 # Mongodb
-MongoAddress: "158.125.11.11:5689"
-MongoUserName: "root"
-MongoPassword: "123456"
+MongoAddress: '158.125.11.11:5689'
+MongoUserName: 'root'
+MongoPassword: '123456'
 
 # 运行模式
 RunMod: 1
