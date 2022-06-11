@@ -43,14 +43,11 @@ const PwaConfig = {
   },
 };
 
-// import AppPackage from './package.json';
+import AppPackage from './package.json';
 
-var AppPackage: any = {};
 
 // const ProxyUrl = 'https://api.mo7.cc';
 const ProxyUrl = `http://localhost:${AppPackage.Port}`;
-
-console.log(AppPackage);
 
 
 // https://vitejs.dev/config/
