@@ -8,30 +8,30 @@ const PwaConfig = {
     sourcemap: true,
   },
   manifest: {
-    name: "Hunter",
-    short_name: "Hunter",
+    name: "SvelteDemo",
+    short_name: "SvelteDemo",
     theme_color: "#F0B90B",
-    description: "Hunter, 像猎手一样去做交易",
+    description: "SvelteDemo, golang serve",
     lang: "zh",
     icons: [
       {
-        src: "https://file.mo7.cc/hunter/logo/android-chrome-192x192.png",
+        src: "//file.mo7.cc/static/lxh_png/2.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "https://file.mo7.cc/hunter/logo/android-chrome-512x512.png",
+        src: "//file.mo7.cc/static/lxh_png/2.png",
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "https://file.mo7.cc/hunter/logo/android-chrome-maskable-192x192.png",
+        src: "//file.mo7.cc/static/lxh_png/2.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "https://file.mo7.cc/hunter/logo/android-chrome-maskable-512x512.png",
+        src: "//file.mo7.cc/static/lxh_png/2.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
@@ -49,6 +49,9 @@ var AppPackage: any = {};
 
 // const ProxyUrl = 'https://api.mo7.cc';
 const ProxyUrl = `http://localhost:${AppPackage.Port}`;
+
+console.log(AppPackage);
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
