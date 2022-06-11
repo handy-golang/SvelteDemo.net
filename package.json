@@ -15,13 +15,8 @@
     "deploy": "./_shell/deploy.sh"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.18.2",
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.49",
     "@tsconfig/svelte": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
-    "eslint-config-alloy": "^4.5.1",
     "svelte": "^3.48.0",
     "svelte-check": "^2.7.2",
     "svelte-preprocess": "^4.10.7",
