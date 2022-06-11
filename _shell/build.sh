@@ -11,9 +11,6 @@ echo " server 端编译 完成"
 
 echo " =========== 开始进行 文件整理 =========== "
 
-echo "清理并创建 dist 目录"
-rm -rf ${outPutPath}
-mkdir ${outPutPath} &&
-  echo "移动 go build 文件"
+echo "移动 go build 文件"
 mv ${buildName} ${outPutPath} &&
   exit
