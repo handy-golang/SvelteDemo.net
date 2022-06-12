@@ -52,6 +52,9 @@ import sveltePreprocess from 'svelte-preprocess';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    exclude: ['@roxi/routify'],
+  },
   plugins: [
     svelte({
       preprocess: sveltePreprocess(),
