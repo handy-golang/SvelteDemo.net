@@ -16,6 +16,4 @@ declare global {
   }
 }
 
-declare module '@roxi/routify/runtime/buildRoutes';
-
 export {};
