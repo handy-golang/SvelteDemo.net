@@ -10,14 +10,14 @@ npm install
 
 echo " =========== vite =========== "
 
-pm2 start "npm run dev" --name "piccker"
+pm2 start "npm run dev" --name "vite"
 
 sleep 1
 
 node_modules/.bin/svelte-check --tsconfig ./tsconfig.json &&
   node_modules/.bin/routify -b &&
   node_modules/.bin/vite build &&
-  pm2 delete "piccker"
+  pm2 delete "vite"
 
 echo " =========== go build  =========== "
 

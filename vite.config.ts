@@ -57,13 +57,13 @@ export default defineConfig({
     svelte({
       preprocess: sveltePreprocess({}),
     }),
+    // createHtmlPlugin({
+    //   // minify: true,
+    //   entry: 'src/main.ts',
+    //   template: 'public/index.html',
+    // }),
     VitePWA(PwaConfig),
     eslintPlugin(),
-    createHtmlPlugin({
-      minify: true,
-      entry: 'src/main.ts',
-      template: 'public/index.html',
-    }),
   ],
   define: {
     ViteConst: JSON.stringify({
