@@ -54,7 +54,7 @@ import sveltePreprocess from 'svelte-preprocess';
 export default defineConfig({
   plugins: [
     svelte({
-      preprocess: sveltePreprocess({}),
+      preprocess: sveltePreprocess(),
     }),
     VitePWA(PwaConfig),
     eslintPlugin(),
