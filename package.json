@@ -6,13 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "routify -c dev:vite",
-    "dev:vite": "vite",
-    "build": "svelte-check --tsconfig ./tsconfig.json && routify -b && vite build",
     "serve": "./_shell/serve_start.sh",
+    "build": "svelte-check --tsconfig ./tsconfig.json && routify -b && vite build && ./_shell/build.sh",
     "preview": "vite preview",
     "git": "./_shell/gitSet.sh",
     "sync": "./_shell/sync_git.sh",
-    "deploy": "./_shell/deploy.sh"
+    "deploy": "./_shell/deploy.sh",
+    "dev:vite": "vite"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.49",
