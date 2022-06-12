@@ -1,4 +1,6 @@
-# Svelte + TS + Vite
+# Svelte + TS + Vite + golang + routify
+
+在 vite Svelte 模板之上配置了 TS 和 routify 以及 go serve 的文件组织
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
 
