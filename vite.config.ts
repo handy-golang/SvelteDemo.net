@@ -61,6 +61,8 @@ export default defineConfig({
     eslintPlugin(),
     createHtmlPlugin({
       minify: true,
+      entry: 'src/main.ts',
+      template: 'public/index.html',
     }),
   ],
   define: {
