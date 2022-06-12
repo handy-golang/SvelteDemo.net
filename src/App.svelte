@@ -3,10 +3,8 @@
   import Counter from '@/lib/Counter.svelte';
 
   const a = '123';
-  const str = 'xxx' + a;
-  let str3 = 'asdasd';
-
-  console.log(str, str3);
+  const str = `xxx${a}`;
+  const str3 = 'asdasd';
 </script>
 
 <main>

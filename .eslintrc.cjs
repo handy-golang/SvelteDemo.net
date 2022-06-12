@@ -1,6 +1,6 @@
 // https://github.com/AlloyTeam/eslint-config-alloy
-
 module.exports = {
+  parser: '@typescript-eslint/parser',
   extends: [
     // ...
     'alloy',
@@ -8,6 +8,14 @@ module.exports = {
   ],
   plugins: [
     // ...
+    'svelte3',
+    '@typescript-eslint',
+  ],
+  overrides: [
+    {
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3',
+    },
   ],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
