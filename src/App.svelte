@@ -2,6 +2,14 @@
   import logo from '@/assets/svelte.png';
   import Counter from '@/lib/Counter.svelte';
 
+  const CounterX = import('@/lib/Counter.svelte');
+
+  console.log(Counter);
+
+  CounterX.then((res) => {
+    console.log(res.default);
+  });
+
   const a = '123';
   const str = `xxx${a}`;
   const str3 = 'asdasd';
