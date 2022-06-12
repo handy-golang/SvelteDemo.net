@@ -5,9 +5,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && ./_shell/build.sh",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "routify -c dev:vite",
+    "dev:vite": "vite",
+    "build": "svelte-check --tsconfig ./tsconfig.json && routify -b && vite build",
     "serve": "./_shell/serve_start.sh",
     "preview": "vite preview",
     "git": "./_shell/gitSet.sh",
@@ -29,7 +29,9 @@
     "typescript": "^4.7.3",
     "vite": "^2.9.12",
     "vite-plugin-eslint": "^1.6.1",
-    "vite-plugin-pwa": "^0.12.0"
+    "vite-plugin-pwa": "^0.12.0",
+    "@roxi/routify": "^2.15.1",
+    "html-minifier": "^4.0.0"
   },
   "dependencies": {
     "less": "^4.1.3"

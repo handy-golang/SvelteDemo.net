@@ -3,6 +3,18 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
+import { minify } from 'html-minifier';
+
+const minifyHtml = () => {
+  return {
+    name: 'html-transform',
+    transformIndexHtml(html) {
+      return minify(html, {
+        collapseWhitespace: true,
+      });
+    },
+  };
+};
 
 const PwaConfig = {
   workbox: {
