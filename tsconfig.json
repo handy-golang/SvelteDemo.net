@@ -13,7 +13,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "dist", ".routify"],
+  "exclude": ["node_modules", "dist", ".routify/*"],
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
-  // "references": [{ "path": "./tsconfig.node.json" }]
 }
