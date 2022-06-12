@@ -3,6 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 const PwaConfig = {
   workbox: {
@@ -51,7 +52,14 @@ const ProxyUrl = `http://localhost:${AppPackage.Port}`;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin()],
+  plugins: [
+    svelte(),
+    VitePWA(PwaConfig),
+    eslintPlugin(),
+    createHtmlPlugin({
+      minify: true,
+    }),
+  ],
   define: {
     ViteConst: JSON.stringify({
       AppVersion: AppPackage.version,
@@ -67,7 +75,6 @@ export default defineConfig({
       },
     ],
   },
-  root: './',
   build: {
     outDir: './dist',
     sourcemap: true,
