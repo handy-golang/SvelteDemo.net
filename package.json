@@ -30,9 +30,7 @@
     "vite": "^2.9.12",
     "vite-plugin-eslint": "^1.6.1",
     "vite-plugin-pwa": "^0.12.0",
-    "@roxi/routify": "^2.15.1"
-  },
-  "dependencies": {
+    "@roxi/routify": "^2.18.7",
     "less": "^4.1.3"
   }
 }
