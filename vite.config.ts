@@ -63,7 +63,7 @@ const ProxyUrl = `http://localhost:${AppPackage.Port}`;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin()],
+  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin(), minifyHtml()],
   define: {
     ViteConst: JSON.stringify({
       AppVersion: AppPackage.version,
