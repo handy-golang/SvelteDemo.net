@@ -3,7 +3,23 @@
 source "./_shell/init.sh"
 #############
 
-echo " =========== 正在进行 server 端编译 =========== "
+rm -rf ${path}"/.routify"
+rm -rf ${path}"/dist"
+
+npm install
+
+echo " =========== vite =========== "
+
+pm2 start "npm run dev" --name "piccker"
+
+sleep 1
+
+node_modules/.bin/svelte-check --tsconfig ./tsconfig.json &&
+  node_modules/.bin/routify -b &&
+  node_modules/.bin/vite build &&
+  pm2 delete "piccker"
+
+echo " =========== go build  =========== "
 
 go mod tidy &&
   go build -o ${buildName}

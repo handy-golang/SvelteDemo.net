@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "routify -c dev:vite",
     "serve": "./_shell/serve_start.sh",
-    "build": "svelte-check --tsconfig ./tsconfig.json && routify -b && vite build && ./_shell/build.sh",
+    "build": "./_shell/build.sh",
     "preview": "vite preview",
     "git": "./_shell/gitSet.sh",
     "sync": "./_shell/sync_git.sh",
