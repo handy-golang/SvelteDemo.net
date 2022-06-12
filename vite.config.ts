@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -50,7 +51,7 @@ const ProxyUrl = `http://localhost:${AppPackage.Port}`;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(), VitePWA(PwaConfig)],
+  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin()],
   define: {
     ViteConst: JSON.stringify({
       AppVersion: AppPackage.version,

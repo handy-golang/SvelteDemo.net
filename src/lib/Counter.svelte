@@ -1,6 +1,7 @@
 <script lang="ts">
-  let count: number = 0;
-  const increment = () => {
+  let count = 0;
+  const increment = (param: any) => {
+    console.log(param);
     count += 1;
   };
 </script>
