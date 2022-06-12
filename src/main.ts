@@ -11,9 +11,9 @@ registerSW({
   onOfflineReady() {},
 });
 
-import App from '@/App.svelte';
+import Router from '@/Router.svelte';
 document.getElementById('SvelteApp').innerHTML = '';
-const app = new App({
+const App = new Router({
   target: document.getElementById('SvelteApp'),
 });
 

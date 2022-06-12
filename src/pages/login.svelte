@@ -2,7 +2,7 @@
   let count = 0;
   const increment = (e: any) => {
     count += 1;
-    console.info(`当前计数:${count}次`);
+    console.info(`当前计数:${count}次`, e);
   };
 </script>
 
