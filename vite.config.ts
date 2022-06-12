@@ -3,7 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
-import { createHtmlPlugin } from 'vite-plugin-html';
 
 const PwaConfig = {
   workbox: {
@@ -58,16 +57,6 @@ export default defineConfig({
       preprocess: sveltePreprocess(),
     }),
     VitePWA(PwaConfig),
-    createHtmlPlugin({
-      // minify: true,
-      // pages: [
-      //   {
-      //     entry: 'src/main.ts',
-      //     filename: 'index.html',
-      //     template: '/index.html',
-      //   },
-      // ],
-    }),
     eslintPlugin(),
   ],
   define: {
@@ -88,11 +77,6 @@ export default defineConfig({
   build: {
     outDir: './dist',
     sourcemap: true,
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, '/index.html'),
-      },
-    },
   },
 
   css: {
