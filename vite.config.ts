@@ -49,11 +49,14 @@ import AppPackage from './package.json';
 
 // const ProxyUrl = 'https://api.mo7.cc';
 const ProxyUrl = `http://localhost:${AppPackage.Port}`;
+import sveltePreprocess from 'svelte-preprocess';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    svelte(),
+    svelte({
+      preprocess: sveltePreprocess({}),
+    }),
     VitePWA(PwaConfig),
     eslintPlugin(),
     createHtmlPlugin({
