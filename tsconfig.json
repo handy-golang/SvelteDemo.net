@@ -10,7 +10,7 @@
      * Note that setting allowJs false does not prevent the use
      * of JS in `.svelte` files.
      */
-    "allowJs": true,
+    "allowJs": false,
     "checkJs": true,
     "isolatedModules": true,
     "outDir": "./",
@@ -19,6 +19,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules", "dist", ".routify"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
+  // "references": [{ "path": "./tsconfig.node.json" }]
 }
