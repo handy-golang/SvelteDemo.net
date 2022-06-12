@@ -3,18 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
-import { minify } from 'html-minifier';
-
-const minifyHtml = () => {
-  return {
-    name: 'html-transform',
-    transformIndexHtml(html) {
-      return minify(html, {
-        collapseWhitespace: true,
-      });
-    },
-  };
-};
 
 const PwaConfig = {
   workbox: {
@@ -63,7 +51,7 @@ const ProxyUrl = `http://localhost:${AppPackage.Port}`;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin(), minifyHtml()],
+  plugins: [svelte(), VitePWA(PwaConfig), eslintPlugin()],
   define: {
     ViteConst: JSON.stringify({
       AppVersion: AppPackage.version,
