@@ -2,7 +2,15 @@
 
 在 vite Svelte 模板之上配置了 TS 和 routify 以及 go serve 的文件组织
 
+内部包含登录等模块
+
 This template should help get you started developing with Svelte and TypeScript in Vite.
+
+## 感言
+
+Svelte 的理念非常新颖，但是深入思考过后发现了很多的问题。对于js来说 编译型的框架在后期升级和维护的难度会非常大，相反的 Vue 跟 React 这种包含运行时的框架相对更加灵活，虽然会存在一定程度的性能损失，但是这种损失是可以接受的。
+
+关于 Vue3 和 React 我这里也写了两份 Demo ，我个人更加看好 Vue 将来的发展，它的写作方式对将来的标准 `Web Components` 兼容起来会更加方便。
 
 ## UI 库
 
