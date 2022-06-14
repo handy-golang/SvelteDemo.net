@@ -37,6 +37,6 @@ func LogInt() {
 }
 
 func LogErr(sum ...any) {
-	str := fmt.Sprintf("系统错误 : %+v", sum)
+	str := fmt.Errorf("系统错误 : %+v", sum)
 	Log.Println(str)
 }
