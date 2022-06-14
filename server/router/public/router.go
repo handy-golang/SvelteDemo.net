@@ -10,7 +10,7 @@ import (
 */
 
 func Router(router fiber.Router) {
-	r := router.Group("/private")
+	r := router.Group("/public", MiddleWare)
 
 	r.Post("/login", account.Login)
 }
