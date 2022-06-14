@@ -1,4 +1,5 @@
 <script>
+  // https://github.com/sveltejs/kit/issues/981
   export let scoped;
   export let scopedSync;
 </script>
