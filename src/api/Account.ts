@@ -1,11 +1,11 @@
-import { ajax_json } from '@/util/http';
-import { Encrypt, removeToken } from '@/util/tools';
+import { ajax_json } from '@/utils/http';
+import { Md5, removeToken } from '@/utils/tools';
 import type { loginType } from './api.d';
 
 export const login = (data: loginType) => {
   const param = {
     ...data,
-    Password: Encrypt(data.Password),
+    Password: Md5(data.Password),
   };
 
   return ajax_json({

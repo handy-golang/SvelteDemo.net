@@ -15,5 +15,5 @@ var UserInfo = AccountTable{
 	Avatar:   "//file.mo7.cc/static/lxh_png/lxh.png",
 	UserID:   "a8c776fca8a046ee8d5c43aa374849c4",
 	Email:    "meichangliang@mo7.cc",
-	Password: mEncrypt.MD5("asdasd55555"),
+	Password: mEncrypt.MD5("123123"),
 }
