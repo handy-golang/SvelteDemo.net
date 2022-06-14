@@ -1,7 +1,8 @@
-package middle
+package api
 
 import (
 	"SvelteDemo.net/server/global/config"
+	"SvelteDemo.net/server/router/middle"
 	"SvelteDemo.net/server/router/result"
 	"github.com/EasyGolang/goTools/mRes/mFiber"
 	"github.com/gofiber/fiber/v2"
@@ -23,7 +24,7 @@ func Ping(c *fiber.Ctx) error {
 	token := c.Get("Token")
 	if len(token) > 0 {
 		// Token 验证
-		_, err := TokenAuth(c)
+		_, err := middle.TokenAuth(c)
 		if err != nil {
 			return c.JSON(result.ErrToken.WithData(err))
 		}

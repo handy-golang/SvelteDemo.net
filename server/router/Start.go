@@ -57,7 +57,7 @@ func Start() {
 	private.Router(r_api)
 
 	// 404 返回 ping
-	app.Use(middle.Ping)
+	// app.Use(api.Ping)
 
 	listenHost := mStr.Join(":", config.AppInfo.Port)
 	global.Log.Println(mStr.Join(`启动服务: http://127.0.0.1`, listenHost))

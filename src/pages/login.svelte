@@ -1,14 +1,21 @@
 <script type="ts">
+  import { login } from '@/api/Account';
+
   let Email = '';
   let Password = '';
 
-  function Submit(e) {
+  async function Submit(e) {
     const Elm = e.target;
     Elm.disabled = true;
-
     setTimeout(() => {
       Elm.disabled = false;
     }, 1000);
+    const res = await login({
+      Email,
+      Password,
+    });
+
+    console.log(res);
   }
 </script>
 
