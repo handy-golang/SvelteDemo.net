@@ -1,5 +1,5 @@
 <script>
-  import { layout, isActive, url } from '@roxi/routify';
+  import { layout, isActive } from '@roxi/routify';
 </script>
 
 <div class="router">
