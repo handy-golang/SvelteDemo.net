@@ -1,6 +1,7 @@
 package public
 
 import (
+	"SvelteDemo.net/server/router/api/account"
 	"SvelteDemo.net/server/router/middle"
 	"github.com/gofiber/fiber/v2"
 )
@@ -12,6 +13,7 @@ import (
 func Router(api fiber.Router) {
 	r := api.Group("/public", MiddleWare)
 
+	r.Post("/login", account.Login)
 	r.Get("/ping", middle.Ping)
 	r.Post("/ping", middle.Ping)
 }

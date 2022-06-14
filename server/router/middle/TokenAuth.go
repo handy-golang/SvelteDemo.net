@@ -9,7 +9,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func TokenAuth(c *fiber.Ctx) (UserID string, err error) {
+func TokenAuth(c *fiber.Ctx) (Message string, err error) {
+	Message = ""
+	err = nil
+
 	Token := c.Get("Token")
 	if len(Token) < 1 {
 		err = errors.New("缺少Token")
@@ -22,7 +25,8 @@ func TokenAuth(c *fiber.Ctx) (UserID string, err error) {
 		return
 	}
 
-	UserID = Claims.Message
+	Message = Claims.Message
+	UserID := Message
 	if len(UserID) != 32 {
 		err = errors.New("Token解析失败")
 		return
@@ -36,5 +40,5 @@ func TokenAuth(c *fiber.Ctx) (UserID string, err error) {
 		return
 	}
 
-	return UserID, nil
+	return
 }
