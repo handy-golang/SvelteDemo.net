@@ -44,8 +44,6 @@ if (origin.includes('localhost')) {
 
 import type { axiosParam, resDataType } from './utils.d';
 const ajax_json = (param: axiosParam): Promise<resDataType> => {
-  console.log(param.url);
-
   const config: axiosParam = {
     headers: {
       Token: getToken(),
