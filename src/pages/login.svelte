@@ -8,7 +8,7 @@
   let Password = '';
   let resMsg: resDataType;
 
-  async function Submit(e) {
+  async function Submit(e: any) {
     const Elm = e.target;
     Elm.disabled = true;
 

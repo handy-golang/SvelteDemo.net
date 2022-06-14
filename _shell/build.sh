@@ -14,7 +14,7 @@ pm2 start "npm run dev" --name "vite"
 
 sleep 1
 
-node_modules/.bin/svelte-check --tsconfig ./tsconfig.json &&
+node_modules/.bin/svelte-check &&
   node_modules/.bin/routify -b &&
   node_modules/.bin/vite build &&
   pm2 delete "vite"
