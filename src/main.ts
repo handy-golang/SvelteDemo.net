@@ -1,4 +1,3 @@
-// @ts-nocheck
 import '@/assets/js/SvelteDemo.net';
 
 declare const ViteConst: any;
