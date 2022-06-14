@@ -23,7 +23,7 @@ func TokenAuth(c *fiber.Ctx) (UserID string, err error) {
 	}
 
 	UserID = Claims.Message
-	if UserID != "670188307@qq.com" {
+	if len(UserID) != 32 {
 		err = errors.New("Token解析失败")
 		return
 	}

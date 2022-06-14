@@ -1,14 +1,6 @@
 package global
 
 /*
-import (
-	"fmt"
-
-	"GoFiberDemo.net/server/global/config"
-	"github.com/EasyGolang/goTools/mJson"
-	"github.com/EasyGolang/goTools/mPath"
-)
-
 func SysEnvInt() {
 	isAppEnvFile := mPath.Exists(config.File.LocalSysEnv)
 	isHomeEnvFile := mPath.Exists(config.File.SysEnv)
@@ -16,7 +8,7 @@ func SysEnvInt() {
 	if isHomeEnvFile || isAppEnvFile {
 		//
 	} else {
-		errStr := fmt.Errorf("没找到 sys_env.yaml 配置文件")
+		errStr := errors.New("没找到 sys_env.yaml 配置文件")
 		LogErr(errStr)
 		panic(errStr)
 	}
@@ -34,7 +26,7 @@ func AppEnvInt() {
 	// 检查配置文件在不在
 	isUserEnvPath := mPath.Exists(config.File.AppEnv)
 	if !isUserEnvPath {
-		errStr := fmt.Errorf("没找到 app_env.yaml 配置文件")
+		errStr := errors.New("没找到 app_env.yaml 配置文件")
 		panic(errStr)
 	}
 

@@ -17,14 +17,12 @@ var SysEnv struct {
 var AppEnv struct {
 	Port int `json:"Port"`
 }
-*/
 
-/*
 func LoadSysEnv(envPath string) {
 	viper.SetConfigFile(envPath)
 	err := viper.ReadInConfig()
 	if err != nil {
-		errStr := fmt.Errorf("SysEnv 读取配置文件出错: %+v", err)
+		errStr := errors.New("SysEnv 读取配置文件出错: %+v", err)
 		LogErr(errStr)
 		panic(errStr)
 	}
@@ -36,7 +34,7 @@ func LoadAppEnv() {
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		errStr := fmt.Errorf("AppEnv 读取配置文件出错: %+v", err)
+		errStr := errors.New("AppEnv 读取配置文件出错: %+v", err)
 		LogErr(errStr)
 		panic(errStr)
 	}

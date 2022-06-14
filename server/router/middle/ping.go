@@ -4,7 +4,6 @@ import (
 	"SvelteDemo.net/server/global/config"
 	"SvelteDemo.net/server/router/result"
 	"github.com/EasyGolang/goTools/mRes/mFiber"
-	"github.com/EasyGolang/goTools/mStr"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -26,7 +25,7 @@ func Ping(c *fiber.Ctx) error {
 		// Token 验证
 		_, err := TokenAuth(c)
 		if err != nil {
-			return c.JSON(result.ErrToken.WithData(mStr.ToStr(err)))
+			return c.JSON(result.ErrToken.WithData(err))
 		}
 		ReturnData["Token"] = token
 		return c.JSON(result.OK.WithData(ReturnData))

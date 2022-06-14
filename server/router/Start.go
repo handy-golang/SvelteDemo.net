@@ -1,7 +1,6 @@
 package router
 
 import (
-	"net/http"
 	"os"
 	"time"
 
@@ -10,12 +9,10 @@ import (
 	"SvelteDemo.net/server/router/middle"
 	"SvelteDemo.net/server/router/private"
 	"SvelteDemo.net/server/router/public"
-	"SvelteDemo.net/server/tmpl"
 	"github.com/EasyGolang/goTools/mStr"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/favicon"
-	"github.com/gofiber/fiber/v2/middleware/filesystem"
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 )
@@ -50,24 +47,16 @@ func Start() {
 		Output:     logFile,
 	}), middle.Public, compress.New(), favicon.New())
 
-	// 模板渲染样例
-	app.Get("/", middle.Ping)
-
 	// api
 	api := app.Group("/api")
 
-	// public
+	// /api/public
 	public.Router(api)
 
-	// private
+	// /api/private
 	private.Router(api)
 
-	// 静态文件服务器
-	app.Use("/", filesystem.New(filesystem.Config{
-		Root: http.FS(tmpl.Static),
-	}))
-
-	// 404
+	// 404 返回 ping
 	app.Use(middle.Ping)
 
 	listenHost := mStr.Join(":", config.AppInfo.Port)
