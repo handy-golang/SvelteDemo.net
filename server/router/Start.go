@@ -48,13 +48,13 @@ func Start() {
 	}), middle.Public, compress.New(), favicon.New())
 
 	// api
-	api := app.Group("/api")
+	r_api := app.Group("/api")
 
 	// /api/public
-	public.Router(api)
+	public.Router(r_api)
 
 	// /api/private
-	private.Router(api)
+	private.Router(r_api)
 
 	// 404 返回 ping
 	app.Use(middle.Ping)

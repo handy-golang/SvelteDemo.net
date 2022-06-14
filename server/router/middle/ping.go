@@ -28,8 +28,7 @@ func Ping(c *fiber.Ctx) error {
 			return c.JSON(result.ErrToken.WithData(err))
 		}
 		ReturnData["Token"] = token
-		return c.JSON(result.OK.WithData(ReturnData))
-	} else {
-		return c.JSON(result.OK.WithData(ReturnData))
 	}
+
+	return c.JSON(result.Succeed.WithData(ReturnData))
 }
